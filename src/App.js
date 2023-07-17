@@ -1,10 +1,10 @@
 import Root from './page/Root';
 import Home from './page/Home';
-import Products from './page/Products';
 import Detail from './page/Detail';
 import Cart from './page/Cart';
 import Add from './page/Add';
 import Notfound from './page/Notfound';
+import Products from './components/Products';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
