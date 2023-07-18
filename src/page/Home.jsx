@@ -5,7 +5,7 @@ import Products from '../components/Products';
 
 export default function Home(){
     return(
-        <div id="wrap">
+        <div>
             <section>
                 <Swiper
                     autoplay={{
