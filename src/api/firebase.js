@@ -3,7 +3,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getDatabase , ref, child, get } from "firebase/database";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -28,12 +28,11 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
-
 /////////////////////////////////// firebase ///////////////////////////////////////////
 
 export default class Firebase {
-  //constructor()
-
+  // constructor()
+   
   async readProduct(){
       const dbRef = ref(db);
       return get(child(dbRef, "/productList"))
@@ -81,5 +80,11 @@ export default class Firebase {
       // An error happened.
     });
   }
+
+  async isLogin(){
+    
+  }
+
+
 
 }
