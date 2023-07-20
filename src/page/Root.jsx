@@ -4,6 +4,7 @@ import { FirebaseAPIProvider } from '../context/FirebaseAPIContext';
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { LoginContextProvider } from '../context/LoginContext';
 
+
 const queryClient = new QueryClient();
 
 export default function Root(){

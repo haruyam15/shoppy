@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import uuid from 'react-uuid'
 import { useFirebaseAPI } from '../context/FirebaseAPIContext';
 import { useQuery } from 'react-query'
+import { currencyNumberFormat } from '../CommonFunction';
 
 export default function Products(){
     const {firebase} = useFirebaseAPI();
@@ -27,7 +28,7 @@ export default function Products(){
                                 </div>
                                 <dl className="flex flex-col justify-between">
                                     <dt className='line-clamp-2'>{item.name}</dt>
-                                    <dd>{item.price}원</dd>
+                                    <dd>{currencyNumberFormat.format(item.price)}원</dd>
                                 </dl>
                             </Link>
                         </li>

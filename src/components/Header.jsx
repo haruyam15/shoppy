@@ -28,7 +28,9 @@ export default function Header(){
                     </li>
                     
                     {isLogin && <li className="mr-4"><div className='flex items-center'><p className='w-7 rounded-full overflow-hidden mr-2'><img src={userInfo.photoURL} alt={userInfo.displayName} /></p>{userInfo.displayName}</div></li>}
+
                     {!isLogin && <li className="mr-4"><button onClick={handleLogin}>Login</button></li>}
+                    
                     {isLogin && <li><button onClick={handleLogout}>Logout</button></li>}
 
                 </ul>

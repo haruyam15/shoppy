@@ -33,19 +33,20 @@ const provider = new GoogleAuthProvider();
 export default class Firebase {
   // constructor()
    
-  async readProduct(){
+  async readProduct(id){
       const dbRef = ref(db);
-      return get(child(dbRef, "/productList"))
-        .then(snapshot => {
-          if (snapshot.exists()) {
-            return(snapshot.val());
-          } else {
-            console.log("No data available");
-          }
-        })
-        .catch(error => {
-        console.error(error);
-      });
+      const url = id ? `/productList/${id}` : '/productList'
+      return get(child(dbRef, url))
+          .then(snapshot => {
+            if (snapshot.exists()) {
+              return(snapshot.val());
+            } else {
+              console.log("No data available");
+            }
+          })
+          .catch(error => {
+          console.error(error);
+        });     
   }
 
   async login(){
