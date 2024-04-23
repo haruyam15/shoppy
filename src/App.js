@@ -4,7 +4,7 @@ import Detail from './page/Detail';
 import Cart from './page/Cart';
 import Add from './page/Add';
 import Notfound from './page/Notfound';
-import Products from './components/Products';
+import ProductsP from './page/ProductsP';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -18,8 +18,8 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/products",
-        element: <Products />,
+        path: "/Products",
+        element: <ProductsP />,
       },
       {
         path: "/detail/:productId",

@@ -45,7 +45,7 @@ export default class Firebase {
             }
           })
           .catch(error => {
-          console.error(error);
+            console.error(error);
         });     
   }
 
